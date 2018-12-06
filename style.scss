@@ -1,0 +1,136 @@
+@import '../variables';
+
+section.icon-section {
+
+	.container {
+		max-width: 1275px;
+		margin: 0 auto;
+		.icon-container {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 100%;
+			@media only screen and (max-width: #{$tabletmaxwidth}) {
+				justify-content: center;
+			}
+		}
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 300px;
+		text-align: center;
+		width: 100%;
+		padding-bottom: 40px;
+		align-self: flex-start;
+		&.small {
+			max-width: 200px;
+
+		}
+		&.container-hover {
+			padding-top: 40px;
+			transition: all 0.3s ease-in;
+			-moz-transition: all 0.3s ease-in;
+			-webkit-transition: all 0.3s ease-in;
+			&:hover {
+				background: #f5f6f7;
+			}
+		}
+		&.underline-hover {
+			transition: all 0.3s ease-in;
+			-moz-transition: all 0.3s ease-in;
+			-webkit-transition: all 0.3s ease-in;
+			position: relative;
+			padding-bottom: 20px;
+			margin-bottom: 38px;
+			h3 {
+				margin-bottom: 0!important;
+			}
+
+			&:hover {
+				&:after {
+					position: absolute;
+					content: '';
+					width: 45%;
+					height: 3px;
+					background: $burnt-orange;
+					bottom: 0;
+
+
+				}
+
+			}
+		}
+		img {
+			height: 100px;
+			width: auto;
+			margin-bottom: 30px;
+		}
+		h3 {
+			font-weight: 500;
+			font-size: 27px;
+			&.no-subheader {
+				margin-bottom: 35px;
+			}
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.4;
+
+		}
+	}
+	&.industry-style {
+		.content {
+
+			h3 {
+				max-width: 70%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	}
+	&.lob-style {
+		//nothing
+
+
+	}
+	&.framed-section {
+		padding: 75px 0 60px;
+		.container {
+			border: 1px solid #d3d7dc;
+			.icon-container {
+				justify-content: space-around;
+				.content {
+					&.small {
+						max-width: 230px;
+					}
+				}
+			}
+		}
+		h2 {
+			text-align: center;
+			display: block;
+			margin: -25px auto 60px;
+			font-weight: 300;
+			span {
+				display: inline-block;
+				background: #fff;
+				padding: 0 20px;
+			}
+		}
+	}
+	.center-button {
+		text-align: center;
+		margin-bottom: 60px;
+		a {
+			text-transform: none;
+			font-weight: bold;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
