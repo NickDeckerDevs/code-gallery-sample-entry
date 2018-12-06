@@ -1,0 +1,52 @@
+$black: #000000;
+$oslo-gray: #7e8890;
+$athens-gray: #e5e8eb; // light
+$burnt-orange: #c65600; // dark orange
+$tango: #e87825; //light orange
+$cloud-burst: #243850;
+$light-grey: #ECECEC;
+$off-white: #edeff0;
+$dark-blue: #223750;
+$blue-grey: #9092A1;
+
+
+$paragraphheight: 16;
+$btnBackground: #000;
+$btnBorder: none;
+
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 800;
+
+
+$linkcolor: blue;
+$bodyfontcolor: $oslo-gray;
+
+
+//********************** Breakpoint Variables **********************/
+$desktopwidewidth: 1200px;
+$desktopwidth: 992px;
+$tabletwidth: 768px;
+$phonewidth: 480px;
+$iphonewidth: 320px;
+
+$desktopmaxwidth: $desktopwidewidth;
+$tabletmaxwidth: $desktopwidth;
+$phonemaxwidth: $tabletwidth ;
+$phonenarrowwidth: $phonewidth;
+
+//********************** MEDIA QUERIES **********************/
+$desktopwide: "only screen and (min-width: #{$desktopwidewidth})";
+$tablet: "only screen and (min-width: #{$tabletwidth}) and (max-width: #{$tabletmaxwidth})";
+$phonewide: "only screen and (min-width: #{$phonewidth}) and (max-width: #{$phonemaxwidth})";
+$phonenarrow: "only screen and (max-width: #{$phonenarrowwidth})";
+$iphone: "only screen and (max-width: #{$iphonewidth})";
+
+//********************** MEDIA SHORTCUTS **********************/
+$mobile: "only screen and (max-width: #{$tabletmaxwidth})";
+$phone: "only screen and (max-width: #{$phonemaxwidth})";
+
+//********************** RETINA QUERY **********************/
+//$highdensity: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5)";
+//We should use Bourbon's HIDPI-media-query functionality for retina-display instead of our own media query

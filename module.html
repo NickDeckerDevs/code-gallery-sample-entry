@@ -1,1 +1,20 @@
-<!-- HTML & HubL code goes here -->
+<section class="icon-section {{ module.module_style }}{% if module.title_inside_frame %} framed-section{% endif %}" {% if module.jump_link %} id="{{ module.jump_link }}" {% endif %}>
+	<div class="container">
+		{% if module.title_inside_frame %} {% if module.header %}
+		<h2><span>{{ module.header }}</span></h2> {% endif %} {% endif %}
+		<div class="icon-container">
+			{% for item in module.field_group %} {% set container = item.hover_type != 'normal-hover' ? 'a' : 'div' %}
+			<{{ container }} class="content {{ item.hover_type }}{% if module.field_group|count > 4 && module.field_group|count < 6 %} small{%endif %}" {% if container=='a' %} href="{{ item.button_link }}" {% endif %}>
+				{% if item.icon.src %}
+				<img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" width="{{ item.icon.width }}" height="{{ item.icon.height }}"> {% endif %}
+				<h3{% if !item.sub_header %} class="no-subheader" {% endif %}>{{ item.header }}</h3>
+					{% if item.sub_header %}
+					<p>{{ item.sub_header }}</p>
+					{% endif %} {% if item.use_button == true && container == 'a' %}
+					<span href="{{ item.button_link }}" class="hs-{{ item.button_type }}-btn">{{ item.button_text }}</span> {% endif %} {% if item.use_button == true && container == 'div' %}
+					<a href="{{ item.button_link }}" class="hs-{{ item.button_type }}-btn">{{ item.button_text }}</a> {% endif %}
+			</{{ container }}>
+			{% endfor %}
+		</div>
+	</div>
+</section>

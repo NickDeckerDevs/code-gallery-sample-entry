@@ -1,1 +1,121 @@
-/* CSS code goes here */
+section.icon-section .container {
+	max-width: 1275px;
+	margin: 0 auto;
+}
+
+section.icon-section .container .icon-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+	section.icon-section .container .icon-container {
+	justify-content: center;
+	}
+}
+
+section.icon-section .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 300px;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 40px;
+	align-self: flex-start;
+}
+
+section.icon-section .content.small {
+	max-width: 200px;
+}
+
+section.icon-section .content.container-hover {
+	padding-top: 40px;
+	transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+}
+
+section.icon-section .content.container-hover:hover {
+  	background: #f5f6f7;
+}
+
+section.icon-section .content.underline-hover {
+	transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 38px;
+}
+
+section.icon-section .content.underline-hover h3 {
+	margin-bottom: 0 !important;
+}
+
+section.icon-section .content.underline-hover:hover:after {
+	position: absolute;
+	content: '';
+	width: 45%;
+	height: 3px;
+	background: #c65600;
+	bottom: 0;
+}
+
+section.icon-section .content img {
+	height: 100px;
+	width: auto;
+	margin-bottom: 30px;
+}
+
+section.icon-section .content h3 {
+	font-weight: 500;
+	font-size: 27px;
+}
+
+section.icon-section .content h3.no-subheader {
+	margin-bottom: 35px;
+}
+
+section.icon-section .content p {
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+section.icon-section.industry-style .content h3 {
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section.icon-section.framed-section {
+	padding: 75px 0 60px;
+}
+
+section.icon-section.framed-section .container {
+	border: 1px solid #d3d7dc;
+}
+
+section.icon-section.framed-section .container .icon-container {
+	justify-content: space-around;
+}
+
+section.icon-section.framed-section .container .icon-container .content.small {
+	max-width: 230px;
+}
+
+section.icon-section.framed-section h2 {
+	text-align: center;
+	display: block;
+	margin: -25px auto 60px;
+	font-weight: 300;
+}
+
+section.icon-section.framed-section h2 span {
+	display: inline-block;
+	background: #fff;
+	padding: 0 20px;
+}
